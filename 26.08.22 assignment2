@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+   char str[100];
+   int begin,middle,end,len=0;
+   gets(str);
+   while(str[len]!='\0')
+   len++;
+   end=len-1;
+   middle=len/2;
+   for(begin=0;begin<middle;begin++)
+   {
+       if(str[begin]!=str[end])
+       {
+           printf("Not a palindrome\n");
+           break;
+       }
+       end--;
+   }
+   if(begin==middle)
+   printf("Palindrome\n");
+
+    return 0;
+}
